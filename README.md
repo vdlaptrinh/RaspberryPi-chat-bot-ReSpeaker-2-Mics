@@ -19,10 +19,10 @@ Project Trợ lý ảo Tiếng Việt (giống như google home, alexa, maika...
 #Phần cứng sử dụng: Raspberry pi4, ReSpeaker-2-Mics, Loa (AUX)
 - Chương trình test, thời gian sử dụng thực tế chưa nhiều. Các bạn dùng có thấy lỗi gì vui lòng cho tôi biết. Thanks
 #Button
-- Chương trình có 1 nút nhấn: wakeup
+- Chương trình có 1 nút nhấn: stop
 - tương ứng GPIO 17
-- Trong lúc loa đang phát tiếng, có thể bấm double nút wakeup để ngừng
-- nút wakeup để gọi bot, sau khi nghe ding có thể ra lệnh
+- Trong lúc loa đang phát tiếng, có thể bấm nút stop để ngừng
+
 
 git clone https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics.git
 
