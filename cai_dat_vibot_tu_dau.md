@@ -107,13 +107,13 @@ pip install pigpio RPi.GPIO lgpio gpiozero
 
 ### STEP4. Cài đặt & Chạy vibot
 
-4.1. Download code vietbot từ github
+4.1. Download code vibot từ github
 ```sh
-git clone --depth 1 https://github.com/vdlaptrinh/Personal-AI-Assistant.git
+git clone --depth 1 https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics.git
 ```
 Chờ cho đến khi kết thúc
 
-4.2. Config vietbot
+4.2. Config vibot
 Mở file config.json trong src thay key của bạn
 ```sh
 porcupine_access_key = "YOUR API KEY"
@@ -128,32 +128,32 @@ activate vibot_env nếu rồi bỏ qua 2 lệnh đầu
 ```sh
 cd /home/pi
 source vibot_env/bin/activate
-cd /home/pi/Personal-AI-Assistant/
+cd /home/pi/RaspberryPi-chat-bot-ReSpeaker-2-Mics/
 python3 main.py
 ```
 
 4.4. Các lệnh tạm dừng, vô hiệu, xem trạng thái...
 ```sh
 sudo systemctl daemon-reload
-sudo systemctl enable ai_assistant.service
-sudo systemctl start ai_assistant.service
-sudo systemctl stop ai_assistant.service
-sudo systemctl status ai_assistant.service
-journalctl -u ai_assistant.service
-sudo systemctl disable ai_assistant.service
+sudo systemctl enable vibot.service
+sudo systemctl start vibot.service
+sudo systemctl stop vibot.service
+sudo systemctl status vibot.service
+journalctl -u vibot.service
+sudo systemctl disable vibot.service
 ```
 ```sh
-sudo nano /etc/systemd/system/ai_assistant.service
+sudo nano /etc/systemd/system/vibot.service
 ```
-Nội dung ai_assistant.service
+Nội dung vibot.service
 ```sh
 [Unit]
 Description=VIBOT
 After=network.target
 
 [Service]
-ExecStart=/home/pi/vibot_env/bin/python3 /home/pi/Personal-AI-Assistant/main.py
-WorkingDirectory=/home/pi/Personal-AI-Assistant/
+ExecStart=/home/pi/vibot_env/bin/python3 /home/pi/RaspberryPi-chat-bot-ReSpeaker-2-Mics/main.py
+WorkingDirectory=/home/pi/RaspberryPi-chat-bot-ReSpeaker-2-Mics/
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
