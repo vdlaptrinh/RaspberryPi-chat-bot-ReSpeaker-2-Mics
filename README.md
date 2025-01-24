@@ -61,7 +61,9 @@ grpcio                       1.69.0
 grpcio-status                1.69.0
 httplib2                     0.22.0
 idna                         3.10
+lgpio                        0.2.2.0
 multidict                    6.1.0
+pigpio                       1.78
 pip                          23.0.1
 propcache                    0.2.1
 proto-plus                   1.25.0
@@ -88,6 +90,7 @@ uritemplate                  4.1.1
 urllib3                      2.3.0
 yarl                         1.18.3
 yt-dlp                       2025.1.15
+
 
 
 
