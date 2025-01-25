@@ -9,7 +9,8 @@ rec = sr.Recognizer()
 
 def recognize_speech():
     # Use the microphone as source for input (specify the microphone index)
-    with sr.Microphone(device_index=1) as source:  
+    with sr.Microphone() as source:  
+    #with sr.Microphone(device_index=0) as source:
         # Adjusting for ambient noise
         rec.adjust_for_ambient_noise(source, duration=0.5)      
         print("Listening...")

@@ -68,7 +68,7 @@ sudo apt-get install libopenblas-dev vlc -y
 ```
 và
 ```sh
-sudo apt-get install python3 python3-pip python3-venv python3-dev python3-rpi.gpio python3-pyaudio
+sudo apt-get install python3 python3-pip python3-venv python3-dev python3-pyaudio
 ```
 và
 ```sh
@@ -95,7 +95,7 @@ Trong môi trường evn, gõ
 pip install -U google-generativeai
 ```
 ```sh
-pip install pvporcupine PyAudio RPi.GPIO SpeechRecognition edge_tts yt_dlp spidev beautifulsoup4 requests
+pip install pvporcupine PyAudio SpeechRecognition edge_tts yt_dlp beautifulsoup4 requests
 ```
 
 Nếu dùng phím bấm cần cài đặt, nếu không dùng bỏ qua
@@ -103,8 +103,10 @@ Nếu dùng phím bấm cần cài đặt, nếu không dùng bỏ qua
 sudo apt-get install python3-rpi.gpio 
 pip install pigpio RPi.GPIO lgpio gpiozero
 ```
-
-
+Nếu dùng Led cài đặt, nếu không dùng bỏ qua
+```sh
+pip install rpi_ws281x spidev
+```
 ### STEP4. Cài đặt & Chạy vibot
 
 4.1. Download code vibot từ github
