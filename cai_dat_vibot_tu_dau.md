@@ -58,7 +58,21 @@ sudo reboot
 ```sh
 sudo raspi-config
 ```
-Tìm đến mục Interface và kích hoạt mở SPI
+Tìm đến mục Interface và kích hoạt mở SPI.
+
+Chỉnh config.txt
+```sh
+sudo nano /boot/firmware/config.txt
+```
+
+```sh
+[all]
+dtoverlay=i2s-mmap
+dtoverlay=wm8960-soundcard
+core_freq_min=500
+core_freq=500
+```
+
 
 ### STEP3. Cài đặt các gói liên quan
 3.1. Cài các gói phục vụ cho Python
