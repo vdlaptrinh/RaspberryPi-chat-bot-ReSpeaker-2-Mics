@@ -58,15 +58,11 @@ def generate_ai_response(data):
 
 def increase_volume():
     print("Tăng âm lượng")
-
     subprocess.run(["amixer", "sset", "Speaker", "5%+"])
     #subprocess.run(["amixer", "sset", "Playback", "5%+"])
     answer_text = "đã tăng âm lượng thêm 5%"
-
     led.set_state('SPEAK')
-
     text_to_speech(answer_text, "vi", music_path)
-
     led.set_state('OFF')
 
 def decrease_volume():
@@ -75,11 +71,8 @@ def decrease_volume():
     subprocess.run(["amixer", "sset", "Speaker", "5%-"])
     #subprocess.run(["amixer", "sset", "Playback", "5%-"])
     answer_text = "đã giảm âm lượng thêm 5%"
-
     led.set_state('SPEAK')
-
     text_to_speech(answer_text, "vi", music_path)
-
     led.set_state('OFF')
 
 def wakeup():
@@ -132,6 +125,7 @@ def wakeup():
             elif any(item in query for item in obj_today_history): 
                 answer_text = today_history_process('TODAY') 
                 btn_wakeup = False
+                
             elif any(item in query for item in obj_music):
                 song_name = extract_song_name(query)
                 #led.rainbow_cycle(0.001)
@@ -195,10 +189,6 @@ def stop():
         music_path = None
         #pixels.off()
         
-
-        
-
-
 
 def extract_song_name(text):
     match = re.search(r"(nhạc|bài hát)\s+(.*)", text, re.IGNORECASE)
