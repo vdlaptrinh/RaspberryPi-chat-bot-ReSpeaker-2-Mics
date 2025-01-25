@@ -31,7 +31,6 @@ sudo apt-get install nano git -y
 
 ```sh
 sudo dphys-swapfile swapoff
-sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
 ```
 Cửa sổ nano mở ra
@@ -130,13 +129,20 @@ git clone --depth 1 https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker
 Chờ cho đến khi kết thúc
 
 4.2. Config vibot
-Mở file config.json trong src thay key của bạn
+Mở file config.py thay api key của bạn
 ```sh
-porcupine_access_key = "YOUR API KEY"
-gemini_key = "YOUR API KEY"
-#Địa chỉ IP của Pi cài home assistant
+"""
+    This is an example for config.py
+    Create config.py yourself with the configuration below with your own API keys
+"""
+porcupine_access_key = "---your API keys---"
+gemini_key = "---your API keys---"
+openweather_api_key = "---your API keys---"
+my_city = "Quận 6"
 HASS_IP = "http://192.168.10.25:8123"
-LONG_TOKEN = "YOUR API KEY"
+LONG_TOKEN = "---your API keys---"
+OPENAI_ASSISTANT_ID = "your own API key"
+OPENAI_API_KEY="your own API key"
 ```
 
 4.3. Chạy vibot
