@@ -1,4 +1,4 @@
-# Voice-chatbot-Pi-4-ReSpeaker-2-Mics
+# Voice-chatbot-Pi-4-ReSpeaker-2-Mics hoặc pi zero 2w
 Project Trợ lý ảo Tiếng Việt (giống như google home, alexa, maika...)
 - Cần điền api key vào file config.py: picovoive, gemini, HASS IP, LONG TOKEN, my_city, openweather
 - Từ khoá đánh thức: picovoice
@@ -16,18 +16,44 @@ Project Trợ lý ảo Tiếng Việt (giống như google home, alexa, maika...
 - STT: GG CLOUD V1 hoặc V2 hoặc GG FREE
 - TTS: EDGE-TTS
 
-#Phần cứng sử dụng: Raspberry pi4, ReSpeaker-2-Mics, Loa (AUX)
+#Phần cứng sử dụng: Raspberry pi4 hoặc pi zero 2w, ReSpeaker-2-Mics, Loa (AUX)
 - Chương trình test, thời gian sử dụng thực tế chưa nhiều. Các bạn dùng có thấy lỗi gì vui lòng cho tôi biết. Thanks
-#Button
-- Chương trình có 1 nút nhấn: stop
-- tương ứng GPIO 17
-- Trong lúc loa đang phát tiếng, có thể bấm nút stop để ngừng
+- pi 4 thì dùng led apa102, pi zero 2w thì dùng led2812
+```sh
+from pixels import Pixels
+from led_ws2812 import Led
 
+pixels = Pixels()
+led = Led()
+
+pixels.speak()
+led.set_state('SPEAK')
+
+pixels.wakeup()
+led.set_state('WAKEUP')
+
+led.set_state('THINK')
+pixels.think()
+
+pixels.off()
+led.set_state('OFF')
+```
+
+#Button Raspberry pi4
+- Chương trình có 1 nút nhấn: stop
+- tương ứng GPIO 17 (button_wakeup = Button(17))
+- Trong lúc loa đang phát tiếng, có thể bấm nút stop để ngừng
+#Button Raspberry pi zero 2W (loa xiaodu) 
+- Chương trình có 4 nút nhấn: + - wakeup stop
+- tương ứng GPIO 5 25 26 6
+- + - tăng giảm âm lượng
+- wakeup: đánh thức bot, ra lệnh cho loa sau khi nghe ding
+- Trong lúc loa đang phát tiếng, có thể bấm nút stop để ngừng
 
 git clone https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics.git
 
 #Hướng dẫn:
-https://github.com/vdlaptrinh/Personal-AI-Assistant/blob/main/cai_dat_vibot_tu_dau.md
+https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics/blob/main/01_cai_dat_vibot_tu_dau.md
 
 #Video:
 https://youtube.com/shorts/WjUBdeJ40gE?si=wpiOlr9a5KWJz3qU
