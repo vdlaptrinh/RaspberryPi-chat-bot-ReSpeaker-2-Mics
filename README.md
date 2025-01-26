@@ -56,7 +56,8 @@ git clone https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics.gi
 https://github.com/vdlaptrinh/RaspberryPi-chat-bot-ReSpeaker-2-Mics/blob/main/01_cai_dat_vibot_tu_dau.md
 
 #Video:
-https://youtube.com/shorts/WjUBdeJ40gE?si=wpiOlr9a5KWJz3qU
+https://www.youtube.com/shorts/eudpXOqnEOw
+https://www.youtube.com/shorts/YsV573PEA30
 
 
 #pip list
