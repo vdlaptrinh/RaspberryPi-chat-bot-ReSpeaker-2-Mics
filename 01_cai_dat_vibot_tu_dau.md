@@ -161,7 +161,7 @@ sudo systemctl enable vibot.service
 sudo systemctl start vibot.service
 sudo systemctl stop vibot.service
 sudo systemctl status vibot.service
-journalctl -u vibot.service
+sudo journalctl -u vibot.service -f
 sudo systemctl disable vibot.service
 ```
 ```sh
