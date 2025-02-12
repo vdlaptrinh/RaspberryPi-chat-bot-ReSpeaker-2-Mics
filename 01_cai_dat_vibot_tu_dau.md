@@ -78,6 +78,7 @@ core_freq=500
 
 ```sh
 sudo apt-get install libopenblas-dev vlc -y
+sudo apt install python3-gpiozero
 ```
 và
 ```sh
@@ -104,6 +105,16 @@ là thành công
 
 3.4. Cài đặt gói Python
 Trong môi trường evn, gõ
+```sh
+pip install grpcio==1.69.0
+```
+neu khong cai duoc thi tai file https://www.piwheels.org/simple/grpcio/grpcio-1.69.0-cp311-cp311-linux_armv6l.whl (124.0 MB)
+sau do pip install grpcio-1.69.0-cp311-cp311-linux_armv6l.whl
+```sh
+pip install grpcio-status==1.69.0
+```
+
+
 ```sh
 pip install -U google-generativeai
 ```
