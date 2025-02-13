@@ -78,7 +78,8 @@ core_freq=500
 
 ```sh
 sudo apt-get install libopenblas-dev vlc -y
-sudo apt install python3-gpiozero
+sudo apt-get install python3-gpiozero
+sudo apt-get install python3-rpi.gpio 
 ```
 và
 ```sh
@@ -124,9 +125,14 @@ pip install pvporcupine PyAudio SpeechRecognition edge_tts yt_dlp beautifulsoup4
 
 Nếu dùng phím bấm cần cài đặt, nếu không dùng bỏ qua
 ```sh
-sudo apt-get install python3-rpi.gpio 
+
 pip install pigpio RPi.GPIO lgpio gpiozero
 ```
+Neu khong cai duoc lgpio thì tải file ở link https://github.com/Gadgetoid/PY_LGPIO/releases và dùng lệnh dưới:
+```sh
+pip install lgpio-0.2.2.0.tar.gz
+```
+
 Nếu dùng Led cài đặt, nếu không dùng bỏ qua
 ```sh
 pip install rpi_ws281x spidev
